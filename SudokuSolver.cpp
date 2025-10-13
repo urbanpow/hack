@@ -3,7 +3,6 @@ using namespace std;
 
 const int SIZE = 9;
 
-// Function to print the board
 void printBoard(int board[SIZE][SIZE]) {
     for (int row = 0; row < SIZE; ++row) {
         for (int col = 0; col < SIZE; ++col)
@@ -12,7 +11,6 @@ void printBoard(int board[SIZE][SIZE]) {
     }
 }
 
-// Check if placing num at board[row][col] is valid
 bool isValid(int board[SIZE][SIZE], int row, int col, int num) {
     for (int x = 0; x < SIZE; ++x) {
         if (board[row][x] == num || board[x][col] == num)
@@ -30,7 +28,6 @@ bool isValid(int board[SIZE][SIZE], int row, int col, int num) {
     return true;
 }
 
-// Recursive backtracking solver
 bool solveSudoku(int board[SIZE][SIZE]) {
     for (int row = 0; row < SIZE; ++row) {
         for (int col = 0; col < SIZE; ++col) {
@@ -43,11 +40,11 @@ bool solveSudoku(int board[SIZE][SIZE]) {
                         board[row][col] = 0; // backtrack
                     }
                 }
-                return false; // no valid number found
+                return false;
             }
         }
     }
-    return true; // board is complete
+    return true; 
 }
 
 int main() {
