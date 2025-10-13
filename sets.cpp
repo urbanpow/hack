@@ -64,9 +64,9 @@ int main() {
     Set mySet;
     mySet.insert(5);
     mySet.insert(10);
-    mySet.insert(5); // Duplicate, won't be added
-    mySet.display(); // Output: { 5 10 }
+    mySet.insert(5); 
+    mySet.display(); 
     mySet.remove(10);
-    mySet.display(); // Output: { 5 }
+    mySet.display();
     cout << "Contains 5? " << (mySet.exists(5) ? "Yes" : "No") << endl;
 }
